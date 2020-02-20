@@ -1,7 +1,8 @@
-import { TagSimulator } from './TagSimulator'
+/* eslint-disable no-new */
+const tags = require('../src/tags')
+const TagSimulator = require('../src/TagSimulator')
 
-// eslint-disable-next-line no-new
-new TagSimulator()
+new TagSimulator(tags)
 
 // if ("serviceWorker" in navigator) {
 //   if (navigator.serviceWorker.controller) {

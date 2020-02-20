@@ -1,4 +1,4 @@
-export const tags = [
+const tags = [
   {
     name: 'Kit Escolar Unicórnio',
     image: 'kit-escolar-unicornio1-2a8f064d260fbbd5d915691977160930-1024-1024.jpg',
@@ -30,3 +30,5 @@ export const tags = [
     url: 'https://www.monicapalma.com.br/produtos/kit-bercario-vingadores-98-etiquetas/'
   }
 ]
+
+module.exports = tags

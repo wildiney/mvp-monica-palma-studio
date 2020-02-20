@@ -6,7 +6,8 @@
   "scripts": {
     "build": "webpack",
     "build:dev": "webpack-dev-server",
-    "build:prod": "webpack --config webpack.config.prod.js"
+    "build:prod": "webpack --config webpack.config.prod.js",
+    "test": "jest --watch"
   },
   "author": "Wildiney Di Masi",
   "license": "MIT",
@@ -22,6 +23,7 @@
     "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
+    "jest": "^25.1.0",
     "webpack": "^4.40.2",
     "webpack-cli": "^3.3.9",
     "webpack-dev-server": "^3.8.1"

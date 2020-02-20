@@ -3,11 +3,10 @@
  * @author Wildiney Di Masi <wildiney@gmail.com>.
  */
 
-import { tags } from './tags'
 
-export class TagSimulator {
-  constructor() {
-    this.createMiniatures()
+class TagSimulator {
+  constructor(tags) {
+    this.createMiniatures(tags)
 
     const fontSelector = document.getElementById('fontSelector')
     const sizeSelector = document.getElementById('sizeSelector')
@@ -23,9 +22,10 @@ export class TagSimulator {
     sizeSelector.addEventListener('change', this.changeSizeHandler)
   }
 
-  createMiniatures() {
+  createMiniatures(tags) {
     console.log('generating miniatures')
     const ul = document.createElement('ul')
+    const miniatures = document.getElementById('miniatures')
 
     tags.map((tag) => {
       const li = document.createElement('li')
@@ -36,7 +36,7 @@ export class TagSimulator {
       img.setAttribute('data-url', tag.url)
       ul.appendChild(li)
       li.appendChild(img)
-      document.getElementById('miniatures').appendChild(ul)
+      miniatures.appendChild(ul)
     })
   }
 
@@ -74,3 +74,5 @@ export class TagSimulator {
     console.log(value)
   }
 }
+
+module.exports = TagSimulator
