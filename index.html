@@ -9,8 +9,8 @@
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <link rel='manifest' href='/manifest.webmanifest'>
-  <link rel="stylesheet" href="assets/css/styles.css" type="text/css">
-  <script src="assets/scripts/app.js" defer></script>
+  <link rel="stylesheet" href="css/styles.css" type="text/css">
+  <script src="js/scripts.js?v=1"></script>
 </head>
 
 <body>
@@ -29,7 +29,7 @@
       <label class="label">Nome</label>
       <input type="text" class="input name" id="input_name" placeholder="Escreva o nome aqui" />
       <label class="label">Fonte</label>
-      <select name="font" id="fontSelector">
+      <select name="font" onchange="changeFont()" id="font">
         <option value="">Selecione uma fonte</option>
         <option value="Arial">Arial</option>
         <option value="Comic Sans MS">Comic Sans MS (Nããããão)</option>
@@ -37,7 +37,7 @@
         <option value="Times New Roman">Times New Roman</option>
       </select>
       <label class="label">Tamanho (min 10pt - max 15pt)</label>
-      <input type="number" name="font-size" value="14" min="10" max="15" id="sizeSelector">
+      <input type="number" name="font-size" value="14" min="10" max="15" onchange="changeSize()" id="fontsize">
 
       <a href="https://www.monicapalma.com.br/produtos/kit-escolar-star-wars-123-etiquetas/?variant=105166139"
         id="tag_url" class="btn btn-primary">COMPRAR</a>
@@ -66,7 +66,7 @@
         <div class="name">
           <p>Seu nome</p>
         </div>
-        <div id="tag"></div>
+        <div class="tag"></div>
       </div>
     </div>
   </div>
